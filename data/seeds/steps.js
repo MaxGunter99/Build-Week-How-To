@@ -4,15 +4,15 @@ exports.seed = function(knex, Promise) {
   return knex('steps').insert([
     {
       howtoId: 1,
-      description: 'Add water'
+      step: 'Add water'
     },
     {
       howtoId: 1,
-      description: 'add stuff'
+      step: 'add stuff'
     },
     {
       howtoId: 1,
-      description: 'Vwala you have slime'
+      step: 'Vwala you have slime'
     }
   ]);
 };

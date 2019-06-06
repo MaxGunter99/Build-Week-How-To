@@ -7,6 +7,7 @@ exports.up = function(knex, Promise) {
         steps.integer( 'step' ).notNullable()
         steps.integer( 'howtoId' ).unsigned();
         steps.foreign( 'howtoId' ).references( 'id' ).on( 'howtos' )
+        .onDelete( 'CASCADE' )
     });
 
 };

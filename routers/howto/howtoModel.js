@@ -63,10 +63,8 @@ function update( id , changes ) {
 };
 
 //DELETE HOWTO ⬇︎
-function remove( id ) {
-
+function remove(howtoId) {
     return db( 'howtos' )
-        .where( 'id' , id )
-        .del();
-        
-};
+      .where("id", howtoId)
+      .del();
+  }

@@ -46,19 +46,19 @@ router.post( '/' , async ( req, res ) => {
 });
 
 //DELETE A HOW TO ⬇︎
-router.delete( '/:id' , ( req, res ) => {
+router.delete( '/:id' , ( req , res ) => {
 
     const { id } = req.params;
     howtos.remove( id )
-    .then( count => {
-        if ( count ) {
-            res.status( 200 ).json({ message: 'Successfully Deleted' , count });
+    .then( howto => {
+        if ( howto ) {
+            res.status( 200 ).json({ message: 'How To sucessfully deleted'});
         } else {
-            res.status( 404 ).json({ message: 'Can not find How to to Delete' });
+            res.status( 404 ).json({ message: 'Can not find How To to delete' });
         }
     })
     .catch( error => {
-        res.status( 500 ).json({ message: 'Server error deleting HowTo' , error });
+        res.status( 500 ).json({ message: 'Server error deleting How To' , error });
     })
 
 });
